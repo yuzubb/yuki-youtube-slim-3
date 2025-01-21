@@ -1,0 +1,7 @@
+jinja2
+requests
+fastapi
+uvicorn
+fastapi-csrf-protect
+youtube-search
+yt-dlp
