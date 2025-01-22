@@ -14,4 +14,6 @@ Renderを使用する場合の手順
 <a href="https://render.com/deploy?repo=https://github.com/taiga905/yuki-youtube-slim-3">
 <img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render">
 </a>
-
+Azure Web Appのやつだと思います。deployできたら教えて下さい。
+<a target="_blank" href="https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-quickstart-templates%2Fmaster%2Fquickstarts%2Fmicrosoft.web%2Fwebapp-linux-node%2Fazuredeploy.json"><img alt="Deploy to Azure" src="https://binbashbanana.github.io/deploy-buttons/buttons/official/azure.svg"></a>
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy)
