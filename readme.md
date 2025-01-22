@@ -14,7 +14,8 @@ Renderを使用する場合の手順
 <a href="https://render.com/deploy?repo=https://github.com/taiga905/yuki-youtube-slim-3">
 <img src="https://render.com/images/deploy-to-render-button.svg" alt="Deploy to Render">
 </a>
-いろんなDeploy Butonです。使えたら教えて下さい。
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https%3A%2F%2Fgithub.com%2Ftaiga905%2Fyuki-youtube-slim-3)
-[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&name=yuki-tango-level&repository=https%3A%2F%2Fgithub.com%2Ftaiga905%2Fyuki-youtube-slim-3&branch=main)
+<br>
+いろんなDeploy Butonです。使えたら教えて下さい。<br>
+[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https%3A%2F%2Fgithub.com%2Ftaiga905%2Fyuki-youtube-slim-3)<br>
+[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/deploy?type=git&name=yuki-tango-level&repository=https%3A%2F%2Fgithub.com%2Ftaiga905%2Fyuki-youtube-slim-3&branch=main)<br>
 [![Deploy to Azure](https://aka.ms/deploytoazurebutton)](https://deploy.azure.com/?repository=https%3A%2F%2Fgithub.com%2Ftaiga905%2Fyuki-youtube-slim-3)
