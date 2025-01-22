@@ -5,3 +5,4 @@ uvicorn
 fastapi-csrf-protect
 youtube-search
 yt-dlp
+python-multipart
