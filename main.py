@@ -271,11 +271,11 @@ def view_bbs(request: Request,t: str,channel:Union[str,None]="main",verify: Unio
     print(fr"{url}bbs/api?t={urllib.parse.quote(t)}&verify={urllib.parse.quote(verify)}&channel={urllib.parse.quote(channel)}")
     return bbsapi_cached(verify,channel)
 
-@app.get("/bbs/result")
-def write_bbs(request: Request,name: str = "",message: str = "",seed:Union[str,None] = "",channel:Union[str,None]="main",verify:Union[str,None]="false",yuki: Union[str] = Cookie(None)):
+@app.psot("/bbs/result")
+def write_bbs(request: Request,name: str  = Form(...),message: str  = Form(...),seed:Union[str,None]  = Form(...),channel:Union[str,None] = Form("main"),verify:Union[str,None] = Form("false"),yuki: Union[str] = Cookie(None)):
     if not(check_cokie(yuki)):
         return redirect("/")
-    t = requests.get(fr"{url}bbs/result?name={urllib.parse.quote(name)}&message={urllib.parse.quote(message)}&seed={urllib.parse.quote(seed)}&channel={urllib.parse.quote(channel)}&verify={urllib.parse.quote(verify)}&info={urllib.parse.quote(get_info(request))}",cookies={"yuki":"True"}, allow_redirects=False)
+    t = requests.post(fr"{url}bbs/result",data={"name":name,"message":message,"seed":seed,"channel":channel,"verify":verify,"info":get_info(request),cookies={"yuki":"True"}, allow_redirects=False)
     if t.status_code != 307:
         return HTMLResponse(t.text)
     return redirect(f"/bbs?name={urllib.parse.quote(name)}&seed={urllib.parse.quote(seed)}&channel={urllib.parse.quote(channel)}&verify={urllib.parse.quote(verify)}")
