@@ -271,7 +271,7 @@ def view_bbs(request: Request,t: str,channel:Union[str,None]="main",verify: Unio
     print(fr"{url}bbs/api?t={urllib.parse.quote(t)}&verify={urllib.parse.quote(verify)}&channel={urllib.parse.quote(channel)}")
     return bbsapi_cached(verify,channel)
 
-@app.psot("/bbs/result")
+@app.post("/bbs/result")
 def write_bbs(request: Request,name: str  = Form(...),message: str  = Form(...),seed:Union[str,None]  = Form(...),channel:Union[str,None] = Form("main"),verify:Union[str,None] = Form("false"),yuki: Union[str] = Cookie(None)):
     if not(check_cokie(yuki)):
         return redirect("/")
