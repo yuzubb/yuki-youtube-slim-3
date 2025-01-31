@@ -827,7 +827,7 @@ class YoutubeBaseInfoExtractor(InfoExtractor):
             self, *, ytcfg=None, delegated_session_id=None, user_session_id=None, session_index=None,
             visitor_data=None, api_hostname=None, default_client='web', **kwargs):
 
-        origin = 'https://' + (self._select_api_hostname(api_hostname, default_client))
+        origin = r'https://yuki-proxy-84513.deno.dev?target=https://' + (self._select_api_hostname(api_hostname, default_client))
         headers = {
             'X-YouTube-Client-Name': str(
                 self._ytcfg_get_safe(ytcfg, lambda x: x['INNERTUBE_CONTEXT_CLIENT_NAME'], default_client=default_client)),
@@ -1191,9 +1191,9 @@ class YoutubeBaseInfoExtractor(InfoExtractor):
         navigation_url = urljoin('https://www.youtube.com/', traverse_obj(
             renderer, ('navigationEndpoint', 'commandMetadata', 'webCommandMetadata', 'url'),
             expected_type=str)) or ''
-        url = r'https://late-recipe-ac3f.yukimidaihuku905.workers.dev/?target='+urllib.parse.quote(f'https://www.youtube.com/watch?v={video_id}')
+        url = r'https://yuki-proxy-84513.deno.dev/?target='+urllib.parse.quote(f'https://www.youtube.com/watch?v={video_id}')
         if overlay_style == 'SHORTS' or '/shorts/' in navigation_url:
-            url = f'https://www.youtube.com/shorts/{video_id}'
+            url = r'https://yuki-proxy-84513.deno.dev/?target='+urllib.parse.quote(f'https://www.youtube.com/shorts/{video_id}')
     
         time_text = (self._get_text(renderer, 'publishedTimeText', 'videoInfo')
                      or self._get_text(reel_header_renderer, 'timestampText') or '')
